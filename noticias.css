@@ -1,0 +1,62 @@
+body{
+    background-color: white;
+    }
+    
+    .title {
+        font-family: 'Arial', sans-serif;
+        font-size: 48px; 
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333; 
+        text-align: center; 
+        margin: 20px 0; 
+      }
+    
+      .boton-inicio {
+        background-color: beige;
+        border: none;
+        border-radius: 12px;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    .boton-inicio:hover {
+        background: linear-gradient(to right,rgb(19, 105, 175), rgb(173, 171, 0));
+    }
+    
+    /*demas*/
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .card {
+        background-color: #57d7ee;
+        border: 1px solid #effa52;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        width: 200px;
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .caption {
+        padding: 10px;
+    }
+    
+    .caption p {
+        margin: 5px 0;
+    }

@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right,rgb(22, 19, 202),rgb(246, 255, 123));
+    background-image: url('/resources/mecanicos.png');
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+
+/*Header*/
+header{
+    position: relative;
+    padding: 0 2rem;
+    /*background: linear-gradient(to right,rgb(22, 19, 202),rgb(246, 255, 123))*/
+    color: white;
+}
+
+.navbar{
+    width: 200%;
+    height: 64px;
+    max-width: 1349px;
+    margin: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+   /* background: linear-gradient(to right,rgb(22, 19, 202),white,rgb(246, 255, 123),red)*/
+   background-color:beige;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale .2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/*Menu bajada*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    height: 0;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: black;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/*imagen de mecanica*/
+.centrado {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    margin-top: 64px; 
+}
+
+/*titulo*/
+.title {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0; 
+  }
+  
+
+/*Responsivos*/
+@media(max-width:992px){
+    .navbar-links,
+    .navbar .action_btn{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+/*recuadros*/
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 2px solid #dceb0f; /* Color similar al de la imagen */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #5fdcec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+h2 {
+    color: #333;
+}
+
+p, ul {
+    color: #555;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+/*logo de josepardo*/
+.logo img {
+    height: 50px; 
+}
+/*titulo mecanica*/
+.mecanica{
+    font-family: 'Arial', sans-serif;
+    font-size: 48px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0;
+}
+/* Section container */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing between sections */
+}
+
+/* Box container */
+.box {
+    display: flex;
+    flex-direction: row; /* Ensure the image and text are aligned horizontally */
+    align-items: flex-start;
+    background-color: #5fdcec;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #dceb0f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Set a maximum width */
+    width: 100%; /* Ensure it takes full width of its container */
+}
+
+/* Image styling */
+.image {
+    width: 40%; /* Set a percentage for image size */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px; /* Add border radius for a smoother look */
+}
+
+/* Text container */
+.text {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Heading and paragraph text */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    color: #555;
+    line-height: 1.6;
+}
+/* Section container */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing between sections */
+}
+
+/* Box container */
+.box {
+    display: flex;
+    flex-direction: row; /* Ensure the image and text are aligned horizontally */
+    align-items: flex-start;
+    background-color: #5fdcec;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #dceb0f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Set a maximum width */
+    width: 100%; /* Ensure it takes full width of its container */
+}
+
+/* Image styling */
+.image {
+    width: 40%; /* Set a percentage for image size */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 10px; /* Add border radius for a smoother look */
+}
+
+/* Text container */
+.text {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Heading and paragraph text */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    color: #555;
+    line-height: 1.6;
+}
